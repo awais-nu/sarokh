@@ -9,10 +9,11 @@ import { NoResponseOrdersComponent } from './no-response-orders/no-response-orde
 import { BulkOrderUpdateComponent } from './bulk-order-update/bulk-order-update.component';
 import { CodReportsComponent } from './cod-reports/cod-reports.component';
 import { ViewOrderComponent } from './view-order/view-order.component';
+import { EditOrderComponent } from './edit-order/edit-order.component';
 
 
 @NgModule({
-  declarations: [AllOrdersComponent, PickupOrdersComponent, DeliveryOrdersComponent, NoResponseOrdersComponent, BulkOrderUpdateComponent, CodReportsComponent, ViewOrderComponent],
+  declarations: [AllOrdersComponent, PickupOrdersComponent, DeliveryOrdersComponent, NoResponseOrdersComponent, BulkOrderUpdateComponent, CodReportsComponent, ViewOrderComponent, EditOrderComponent],
   imports: [
     CommonModule,
     OrdersRoutingModule
