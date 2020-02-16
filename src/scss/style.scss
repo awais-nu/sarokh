@@ -1,0 +1,14 @@
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "~@coreui/coreui/scss/coreui";
+
+// If you want to add something do it here
+@import "custom";
+
+.table-header{
+  background-color: #f79f38;
+  color: #000;
+  border: #ec1c24 solid 1px;
+}
