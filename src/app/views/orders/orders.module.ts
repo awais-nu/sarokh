@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { OrdersRoutingModule } from './orders-routing.module';
 import { AllOrdersComponent } from './all-orders/all-orders.component';
@@ -16,7 +17,8 @@ import { EditOrderComponent } from './edit-order/edit-order.component';
   declarations: [AllOrdersComponent, PickupOrdersComponent, DeliveryOrdersComponent, NoResponseOrdersComponent, BulkOrderUpdateComponent, CodReportsComponent, ViewOrderComponent, EditOrderComponent],
   imports: [
     CommonModule,
-    OrdersRoutingModule
+    OrdersRoutingModule,
+    NgxDatatableModule
   ]
 })
 export class OrdersModule { }
