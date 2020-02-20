@@ -4,7 +4,7 @@ export const navItems: INavData[] = [
     {
         name: 'Dashboard',
         url: '/dashboard',
-        icon: 'fas fa-shipping-fast',
+        icon: 'fas fa-rocket',
         // badge: {
         //   variant: 'info',
         //   text: 'NEW'
@@ -17,7 +17,7 @@ export const navItems: INavData[] = [
     {
         name: 'Tracking',
         url: '/base',
-        icon: 'icon-map',
+        icon: 'fas fa-map-marker-alt',
         children: [
             {
                 name: 'Driver Locations',
@@ -34,32 +34,32 @@ export const navItems: INavData[] = [
     {
         name: 'Orders',
         url: '/orders',
-        icon: 'icon-cursor',
+        icon: 'fas fa-dolly-flatbed',
         children: [
             {
                 name: 'All Orders',
                 url: '/orders/allorders',
-                icon: 'icon-map'
+                icon: 'fas fa-dolly-flatbed'
             },
             {
                 name: 'Pick up Orders',
                 url: '/orders/pickuporders',
-                icon: 'icon-map'
+                icon: 'fas fa-dolly-flatbed'
             },
             {
                 name: 'Delivery Orders',
                 url: '/orders/deliveryorders',
-                icon: 'icon-map'
+                icon: 'fas fa-dolly-flatbed'
             },
             {
                 name: 'No Response Orders',
                 url: '/orders/noresponseorders',
-                icon: 'icon-map'
+                icon: 'fas fa-dolly-flatbed'
             },
             {
                 name: 'Bulk Order Update',
                 url: '/orders/bulkordersupdate',
-                icon: 'icon-map'
+                icon: 'fas fa-dolly-flatbed'
             },
             {
                 name: 'COD Reports',
@@ -71,17 +71,17 @@ export const navItems: INavData[] = [
     {
         name: 'Shippers',
         url: '/charts',
-        icon: 'icon-pie-chart',
+        icon: 'fas fa-shipping-fast',
         children: [
             {
                 name: 'Shippers',
                 url: '/base/cards',
-                icon: 'icon-map'
+                icon: 'fas fa-shipping-fast'
             },
             {
                 name: 'Shipment Issues',
                 url: '/base/carousels',
-                icon: 'icon-map'
+                icon: 'fas fa-box'
             },
             {
                 name: 'Billing',
@@ -93,7 +93,7 @@ export const navItems: INavData[] = [
     {
         name: 'Warehouse',
         url: '/icons',
-        icon: 'icon-star',
+        icon: 'fas fa-warehouse',
         children: [
             {
                 name: 'Warehouses',
@@ -130,7 +130,7 @@ export const navItems: INavData[] = [
     {
         name: 'Finance',
         url: '/notifications',
-        icon: 'icon-bell',
+        icon: 'fas fa-money-bill-wave',
         children: [
             {
                 name: 'All ledgers',
@@ -189,7 +189,7 @@ export const navItems: INavData[] = [
     {
         name: 'Vehicles',
         url: '/pages',
-        icon: 'icon-star',
+        icon: 'fas fa-truck',
         children: [
             {
                 name: 'Vehicles',
@@ -281,37 +281,37 @@ export const ShipperNavItems: INavData[] = [
     {
         name: 'Orders',
         url: '/orders',
-        icon: 'icon-cursor',
+        icon: 'fas fa-dolly-flatbed',
         children: [
             {
                 name: 'All Orders',
                 url: '/orders/allorders',
-                icon: 'icon-map'
+                icon: 'fas fa-dolly-flatbed'
             },
             {
                 name: 'Pick up Orders',
                 url: '/orders/pickuporders',
-                icon: 'icon-map'
+                icon: 'fas fa-dolly-flatbed'
             },
             {
                 name: 'Delivery Orders',
                 url: '/orders/deliveryorders',
-                icon: 'icon-map'
+                icon: 'fas fa-dolly-flatbed'
             },
             {
                 name: 'No Response Orders',
                 url: '/orders/noresponseorders',
-                icon: 'icon-map'
+                icon: 'fas fa-dolly-flatbed'
             },
             {
                 name: 'Bulk Order Update',
                 url: '/orders/bulkordersupdate',
-                icon: 'icon-map'
+                icon: 'fas fa-dolly-flatbed'
             },
             {
                 name: 'COD Reports',
                 url: '/orders/codreports',
-                icon: 'icon-map'
+                icon: 'fas fa-dolly-flatbed'
             }
         ]
     },
