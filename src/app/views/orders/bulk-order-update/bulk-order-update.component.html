@@ -20,36 +20,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>3242234</td>
-              <td>1/1/2010</td>
-              <td>Pickup by Sarokh</td>
-              <td>Single</td>
-              <td>ABC</td>
-              <td>Active</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>3242234</td>
-              <td>1/1/2010</td>
-              <td>Point 23 / Zone A</td>
-              <td>Single</td>
-              <td>5</td>
-              <td>12121</td>
-              <td>Return</td>
-              <td>Salman</td>
-            </tr>
-            <tr>
-              <td>3242234</td>
-              <td>1/1/2010</td>
-              <td>Point 23 / Zone A</td>
-              <td>Single</td>
-              <td>5</td>
-              <td>12121</td>
-              <td>Return</td>
-              <td>Salman</td>
+            <tr *ngFor="let order of orders">
+              <td>{{order.id}}</td>
+              <td>{{order.createdDatetime}}</td>
+              <td>{{order.orderType}}</td>
+              <td>{{order.shipmentClassification}}</td>
+              <td>{{order.shipperId}}</td>
+              <td>{{order.status}}</td>
+              <td>{{order.transitTime}}</td>
+              <td>{{order.shipperWarehouseId}}</td>
+              <td>{{order.receiverName}}</td>
             </tr>
           </tbody>
         </table>

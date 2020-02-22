@@ -12,7 +12,7 @@ export class DefaultLayoutComponent {
   public navItems: any;
 
   constructor(private router: Router, private storage: LocalStorageService){
-    if(this.storage.retrieve('role') === 'admin'){
+    if(localStorage.getItem('role') === 'admin'){
       this.navItems = navItems;
     }else{
       this.navItems = ShipperNavItems;
@@ -24,6 +24,7 @@ export class DefaultLayoutComponent {
   }
 
   logout(){
+    localStorage.clear();
     this.router.navigate(['login']);
   }
 }

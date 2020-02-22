@@ -3,7 +3,7 @@
     <div class="col-sm-6 col-lg-3">
       <div class="card text-white bg-info">
         <div class="card-body pb-4">
-          <div class="text-value">65465</div>
+          <div class="text-value">{{dashboardData.totalOrders}}</div>
           <div>Total Orders</div>
         </div>
       </div>
@@ -11,7 +11,7 @@
     <div class="col-sm-6 col-lg-3">
       <div class="card text-white bg-primary">
         <div class="card-body pb-4">
-          <div class="text-value">9658</div>
+          <div class="text-value">{{dashboardData.inProgressOrders}}</div>
           <div>Order in Progress</div>
         </div>
       </div>
@@ -19,7 +19,7 @@
     <div class="col-sm-6 col-lg-3">
       <div class="card text-white bg-warning">
         <div class="card-body pb-4">
-          <div class="text-value">5651</div>
+          <div class="text-value">{{dashboardData.pendingDelivery}}</div>
           <div>Pending Delivery</div>
         </div>
       </div>
@@ -27,7 +27,7 @@
     <div class="col-sm-6 col-lg-3">
       <div class="card text-white bg-danger">
         <div class="card-body pb-4">
-          <div class="text-value">9823</div>
+          <div class="text-value">{{dashboardData.pendingPickups}}</div>
           <div>Pending Pickups</div>
         </div>
       </div>
@@ -107,7 +107,7 @@
         <div class="col-12">
           <div class="card text-white bg-warning">
             <div class="card-body pb-4">
-              <div class="text-value">Rial 9823</div>
+              <div class="text-value">Rial {{dashboardData.walletPickups}}</div>
               <div>Wallet Pickups</div>
             </div>
           </div>
@@ -115,7 +115,7 @@
         <div class="col-12">
           <div class="card text-white bg-primary">
             <div class="card-body pb-4">
-              <div class="text-value">Rial 9823</div>
+              <div class="text-value">Rial {{dashboardData.codPayable}}</div>
               <div>COD Payable</div>
             </div>
           </div>
@@ -123,7 +123,7 @@
         <div class="col-12">
           <div class="card text-white bg-info">
             <div class="card-body pb-4">
-              <div class="text-value">Rial 9823</div>
+              <div class="text-value">Rial {{dashboardData.prepaidOrdersReceivable}}</div>
               <div>Prepaid Order Receivable</div>
             </div>
           </div>
@@ -131,7 +131,7 @@
         <div class="col-12">
           <div class="card text-white bg-primary">
             <div class="card-body pb-4">
-              <div class="text-value">Rial 9823</div>
+              <div class="text-value">Rial {{dashboardData.agentsPayable}}</div>
               <div>Agent's Payables</div>
             </div>
           </div>
@@ -139,7 +139,7 @@
         <div class="col-12">
           <div class="card text-white bg-danger">
             <div class="card-body pb-4">
-              <div class="text-value">Rial 9823</div>
+              <div class="text-value">Rial {{dashboardData.agentsReceivable}}</div>
               <div>Agent's Recieveables</div>
             </div>
           </div>
@@ -147,7 +147,7 @@
         <div class="col-12">
           <div class="card text-white bg-warning">
             <div class="card-body pb-4">
-              <div class="text-value">Rial 9823</div>
+              <div class="text-value">Rial {{dashboardData.driverReceivable}}</div>
               <div>Driver Recieveables</div>
             </div>
           </div>
@@ -155,7 +155,7 @@
         <div class="col-12">
           <div class="card text-white bg-primary">
             <div class="card-body pb-4">
-              <div class="text-value">Rial 9823</div>
+              <div class="text-value">Rial {{dashboardData.driverPayable}}</div>
               <div>Driver Payable</div>
             </div>
           </div>

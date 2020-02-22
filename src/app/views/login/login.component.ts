@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {LocalStorageService} from 'ngx-webstorage';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit{
   constructor(
     private formbuilder: FormBuilder,
     private router: Router,
-    private storage:LocalStorageService
+    private storage:LocalStorageService,
+    private auth: AuthService
     ){}
 
   ngOnInit(){
@@ -27,12 +29,28 @@ export class LoginComponent implements OnInit{
 
   get f() { return this.loginForm.controls; }
 
-  login(){
-    if(this.loginForm.controls['username'].value === 'admin'){
-      this.storage.store('role', 'admin');
-    }else if(this.loginForm.controls['username'].value === 'shipper'){
-      this.storage.store('role', 'shipper');
+  submit () {
+    this.submitted = true;
+    if(!this.loginForm.invalid){
+      this.login();
     }
-    this.router.navigate(['dashboard']);
+  }
+
+  login(){
+    this.auth.login(this.loginForm.controls['username'].value, this.loginForm.controls['password'].value).subscribe(res => {
+      let role = '';
+      if(res && res.data){
+        role = res.data.role.name;
+        localStorage.setItem('_id', res.data.userId);
+        if(role === 'Admin'){
+          localStorage.setItem('role', 'admin');
+        }else if(role === 'Shipper'){
+          localStorage.setItem('role', 'shipper');
+        }
+        this.router.navigate(['dashboard']);
+      }
+    }, err => {
+
+    })
   }
  }

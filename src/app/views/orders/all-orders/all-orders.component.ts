@@ -1,5 +1,7 @@
 import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AdminService } from '../../../services/admin.service';
+
 declare var $;
 
 @Component({
@@ -13,7 +15,7 @@ export class AllOrdersComponent implements OnInit, AfterViewInit {
   dataTable: any;
   dtOption: any = {};
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private adminService: AdminService) { }
 
   ngOnInit(): void {
     this.dtOption = {
@@ -21,6 +23,8 @@ export class AllOrdersComponent implements OnInit, AfterViewInit {
       "ordering": true,
       "info": true
     };
+
+    this.fetchOrders();
   }
   ngAfterViewInit() {
     this.dataTable = $(this.table.nativeElement);
@@ -29,6 +33,11 @@ export class AllOrdersComponent implements OnInit, AfterViewInit {
 
   viewOrder() {
     this.router.navigate(['orders/vieworder', '216513']);
+  }
+
+  fetchOrders () {
+    this.adminService.fetchOrdersList().subscribe( res => {
+    })
   }
 
 }

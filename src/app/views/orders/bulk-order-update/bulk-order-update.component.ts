@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../../../services/admin.service';
+import { Order } from '../../../interfaces/order';
 
 @Component({
   selector: 'app-bulk-order-update',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BulkOrderUpdateComponent implements OnInit {
 
-  constructor() { }
+  orders: any;
+
+  constructor(private adminService: AdminService) { }
 
   ngOnInit(): void {
+    this.fetchOrder();
+  }
+
+  fetchOrder(){
+    this.adminService.fetchOrderByType('BULK_ORDERS').subscribe( res => {
+      if(res && res.data){
+        this.orders = res.data;
+      }
+    })
   }
 
 }
