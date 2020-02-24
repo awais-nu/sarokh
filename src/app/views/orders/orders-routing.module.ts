@@ -8,6 +8,7 @@ import { BulkOrderUpdateComponent } from './bulk-order-update/bulk-order-update.
 import { CodReportsComponent } from './cod-reports/cod-reports.component';
 import { ViewOrderComponent } from './view-order/view-order.component';
 import { EditOrderComponent } from './edit-order/edit-order.component';
+import { CreateOrderComponent } from './create-order/create-order.component';
 
 const routes: Routes = [
   {
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path: 'editorder/:orderId',
     component: EditOrderComponent
+  },
+  {
+    path: 'createorder',
+    component: CreateOrderComponent
   }
 ];
 

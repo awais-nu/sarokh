@@ -9,6 +9,11 @@
 
 //importing icons 5
 @import "~font-awesome/css/font-awesome.css";
+
+//importing wizard styles
+// @import '/node_modules/angular-archwizard/archwizard.css';
+// @import '/node_modules/angular-archwizard/archwizard.css';
+
 .table-header{
   background-color: #f79f38;
   color: #000;
@@ -35,4 +40,3 @@
   table.dataTable.nowrap th, table.dataTable.nowrap td{color: #595d6e;}
   .dataTables_wrapper .dataTables_filter input {border: 1px solid  #e2e5ec;border-radius: 4px;padding: 0.35rem 1rem;margin-bottom: 25px;}
   a:hover{text-decoration: none;}
- 
