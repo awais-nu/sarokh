@@ -1,0 +1,339 @@
+<div class="card margintop50">
+  <div class="card-header">
+    Shipper Signup
+  </div>
+  <div class="card-body">
+    <div class="wizard-container">
+      <aw-wizard>
+        <aw-wizard-step stepTitle="Basic Information" [canExit]="basicInfoForm.valid">
+          <form class="margintop30" [formGroup]="basicInfoForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="First Name" formControlName="firstName" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name" formControlName="lastName" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="contact">Contact No</label>
+                <input type="text" class="form-control" id="contact" placeholder="Contact No" formControlName="contact" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="dateOfBirth">Dat of Birth</label>
+                <input type="text" class="form-control" id="dateOfBirth" placeholder="Dat of Birth" formControlName="dateOfBirth" required>
+              </div>
+            </div>
+            <div class="btn-container float-right">
+              <button class="btn btn-success" type="button" awNextStep>Next Step</button>
+            </div>
+          </form>
+
+        </aw-wizard-step>
+        <aw-wizard-step stepTitle="Business Detail" [canExit]="businessDetailsForm.valid">
+          <form class="margintop30" [formGroup]="businessDetailsForm">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Business</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Individual</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Business Name</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Business Name">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Iqama No</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Iqama No">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">VAT Number</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="VAT Number">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">CR No</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="CR No">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Iqama Copy Upload</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                      </div>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">CR Copy Upload</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                      </div>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Bank Name</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Bank Name">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">IBAN</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="IBAN">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Business Name</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Business Name">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Iqama No</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Iqama No">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">VAT Number</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="VAT Number">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">CR No</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="CR No">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Iqama Copy Upload</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                      </div>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">CR Copy Upload</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                      </div>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Bank Name</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Bank Name">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">IBAN</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="IBAN">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-container float-right margintop30">
+              <button class="btn btn-secondary dark-grey" type="button" awPreviousStep>Go to previous step</button>
+              <button class="btn btn-success" type="button" awNextStep>Go to next step</button>
+            </div>
+          </form>
+        </aw-wizard-step>
+        <!-- <aw-wizard-step stepTitle="Billing Detail">
+          <form class="margintop30">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Office/Billing Address</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Office/Billing Address">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">City</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="City">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Country</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Country">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Post Code</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Post Code">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Concern Person</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Concern Person">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Designation</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Designation">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Contact No</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Contact No">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Operational Hours</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Operational Hours">
+              </div>
+            </div>
+            <div class="btn-container float-right">
+              <button class="btn btn-secondary dark-grey" type="button" awPreviousStep>Go to previous step</button>
+              <button class="btn btn-success" type="button" awNextStep>Go to next step</button>
+            </div>
+          </form>
+
+        </aw-wizard-step>
+        <aw-wizard-step stepTitle="Warehouse Detail">
+          <form class="margintop30">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Warehouse Address</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Warehouse Address">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">City</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="City">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Country</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Country">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Post Code</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Post Code">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="exampleFormControlSelect1">Designation</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Concern Person</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Concern Person">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Contact Number</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Contact Number">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Operational Hours</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Operational Hours">
+              </div>
+            </div>
+            <div class="btn-container float-right">
+              <button class="btn btn-secondary dark-grey" type="button" awPreviousStep>Go to previous step</button>
+              <button class="btn btn-success" type="button" awNextStep>Go to next step</button>
+            </div>
+          </form>
+
+        </aw-wizard-step>
+        <aw-wizard-step stepTitle="Security">
+          <form class="margintop30">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Passsword</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Passsword">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Confirm Passsword</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Confirm Passsword">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Re - Confirm Passsword</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Re - Confirm Passsword">
+              </div>
+            </div>
+            <div class="btn-container float-right">
+              <button class="btn btn-secondary dark-grey" type="button" awPreviousStep>Go to previous step</button>
+              <button class="btn btn-success" type="button" awNextStep>Go to next step</button>
+            </div>
+          </form>
+
+        </aw-wizard-step>
+        <aw-wizard-step stepTitle="Verification">
+          <form class="margintop30">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Mobile OTP Confirmation</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Mobile OTP Confirmation">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Email OTP Confirmation</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Email OTP Confirmation">
+              </div>
+            </div>
+            <div class="btn-container float-right">
+              <button class="btn btn-secondary dark-grey" type="button" awPreviousStep>Previous Step</button>
+              <button class="btn btn-success" type="button" (click)="finishFunction()">Finish</button>
+            </div>
+          </form>
+
+        </aw-wizard-step> -->
+      </aw-wizard>
+    </div>
+  </div>
+</div>

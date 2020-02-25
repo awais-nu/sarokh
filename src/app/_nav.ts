@@ -70,22 +70,22 @@ export const navItems: INavData[] = [
     },
     {
         name: 'Shippers',
-        url: '/charts',
+        url: '/shipper',
         icon: 'fas fa-shipping-fast',
         children: [
             {
                 name: 'Shippers',
-                url: '/base/cards',
+                url: '/shipper',
                 icon: 'fas fa-shipping-fast'
             },
             {
                 name: 'Shipment Issues',
-                url: '/base/carousels',
+                url: '/shipper',
                 icon: 'fas fa-box'
             },
             {
                 name: 'Billing',
-                url: '/base/carousels',
+                url: '/shipper',
                 icon: 'icon-map'
             }
         ]
