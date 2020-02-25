@@ -40,3 +40,14 @@
   table.dataTable.nowrap th, table.dataTable.nowrap td{color: #595d6e;}
   .dataTables_wrapper .dataTables_filter input {border: 1px solid  #e2e5ec;border-radius: 4px;padding: 0.35rem 1rem;margin-bottom: 25px;}
   a:hover{text-decoration: none;}
+  /* wizzard css */
+  aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li:not(:last-child):before {
+    background-color: #e4e7ea !important; height: 4px; top:-9px;}
+    aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li .step-indicator{width: 25px; height: 25px;top:-20px; background: e2e5ec;}
+    .wizard-container{ margin-top: 10px;}
+    .margintop50{margin-top: 50px;}
+    .margintop30{margin-top:30px;}
+    aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li.navigable.done a:hover .step-indicator{width:24px;height: 24px;}
+.dark-grey{background-color: #6c757d;}
+.wizard-container button{color: #FFF;}
+.wizard-container .form-row > .col, .form-row > [class*="col-"]{padding-left: 15px; padding-right:15px;}
