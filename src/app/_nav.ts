@@ -171,17 +171,17 @@ export const navItems: INavData[] = [
     },
     {
         name: 'Drivers',
-        url: '/widgets',
+        url: '/driver',
         icon: 'icon-calculator',
         children: [
             {
                 name: 'Drivers',
-                url: '/base/cards',
+                url: '/driver',
                 icon: 'icon-map'
             },
             {
                 name: 'Drivers Issues',
-                url: '/base/carousels',
+                url: '/driver',
                 icon: 'icon-map'
             }
         ]
