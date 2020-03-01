@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { OrdersRoutingModule } from './orders-routing.module';
 import { ArchwizardModule } from 'angular-archwizard';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 import { AllOrdersComponent } from './all-orders/all-orders.component';
 import { PickupOrdersComponent } from './pickup-orders/pickup-orders.component';
@@ -13,7 +15,7 @@ import { BulkOrderUpdateComponent } from './bulk-order-update/bulk-order-update.
 import { CodReportsComponent } from './cod-reports/cod-reports.component';
 import { ViewOrderComponent } from './view-order/view-order.component';
 import { EditOrderComponent } from './edit-order/edit-order.component';
-import { CreateOrderComponent } from './create-order/create-order.component';
+import { AddOrderComponent } from './add-order/add-order.component';
 
 
 @NgModule({
@@ -26,13 +28,16 @@ import { CreateOrderComponent } from './create-order/create-order.component';
     CodReportsComponent,
     ViewOrderComponent,
     EditOrderComponent,
-    CreateOrderComponent
+    AddOrderComponent
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     OrdersRoutingModule,
     NgxDatatableModule,
-    ArchwizardModule
+    ArchwizardModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule
   ]
 })
 export class OrdersModule { }

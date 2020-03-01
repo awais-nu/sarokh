@@ -82,9 +82,9 @@ export class AddDealerComponent implements OnInit {
   }
 
   submit(){
-    debugger;
+    // debugger;
     this.dealerService.addDealer(this.fullFormsInfo).subscribe( res => {
-      debugger;
+      // debugger;
     }, err => {
 
     })
