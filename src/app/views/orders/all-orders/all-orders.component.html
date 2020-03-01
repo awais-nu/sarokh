@@ -3,6 +3,9 @@
     <div class="card card-accent-primary">
       <div class="card-header">
         All Orders
+        <div class="row">
+          <button class="btn btn-success" (click)="addOrder()">Add Order</button>
+        </div>
       </div>
       <div class="card-body">
         <table #dataTable style="width:100%" class="display nowrap dataTable dtr-inline collapsed">

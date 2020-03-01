@@ -45,7 +45,8 @@
               </div>
               <div class="form-group col-md-6">
                 <label for="dateOfBirth">Dat of Birth</label>
-                <input type="text" class="form-control" id="dateOfBirth" placeholder="Dat of Birth" formControlName="dateOfBirth" required>
+                <input type="text" class="form-control" id="dateOfBirth" placeholder="Dat of Birth" formControlName="dateOfBirth" required [owlDateTime]="dob" [owlDateTimeTrigger]="dob">
+                <owl-date-time [pickerType]="'calendar'" #dob></owl-date-time>
               </div>
             </div>
             <div class="btn-container float-right">
@@ -73,7 +74,7 @@
               </div>
               <div class="form-group col-md-6">
                 <label for="postCode">Post Code</label>
-                <input type="text" class="form-control" id="postCode" placeholder="Post Code" formControlName="postCode" required>
+                <input type="number" class="form-control" id="postCode" placeholder="Post Code" formControlName="postCode" required>
               </div>
             </div>
             <div class="form-row">
@@ -124,21 +125,23 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="compensationClearanceDuration">Compensation Clearence Duration</label>
-                <input type="text" class="form-control" id="compensationClearanceDuration" placeholder="Compensation Clearence Duration" formControlName="compensationClearanceDuration" required>
+                <input type="number" class="form-control" id="compensationClearanceDuration" placeholder="Compensation Clearence Duration" formControlName="compensationClearanceDuration" required>
               </div>
               <div class="form-group col-md-6">
                 <label for="preShipmentCompensation">Pre Shipments Compensation</label>
-                <input type="text" class="form-control" id="preShipmentCompensation" placeholder="Pre Shipment Compensation" formControlName="preShipmentCompensation" required>
+                <input type="number" class="form-control" id="preShipmentCompensation" placeholder="Pre Shipment Compensation" formControlName="preShipmentCompensation" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="contractStartDate">Contract Starting</label>
-                <input type="text" class="form-control" id="contractStartDate" placeholder="Contract Starting" formControlName="contractStartDate" required>
+                <input type="text" class="form-control" id="contractStartDate" placeholder="Contract Starting" formControlName="contractStartDate" required [owlDateTime]="contractStartDate" [owlDateTimeTrigger]="contractStartDate">
+                <owl-date-time [pickerType]="'calendar'" #contractStartDate></owl-date-time>
               </div>
               <div class="form-group col-md-6">
                 <label for="contractValidToDate">Contract Valid Till</label>
-                <input type="text" class="form-control" id="contractValidToDate" placeholder="Contract Valid Till" formControlName="contractValidToDate" required>
+                <input type="text" class="form-control" id="contractValidToDate" placeholder="Contract Valid Till" formControlName="contractValidToDate" required [owlDateTime]="contractValidToDate" [owlDateTimeTrigger]="contractValidToDate">
+                <owl-date-time [pickerType]="'calendar'" #contractValidToDate></owl-date-time>
               </div>
             </div>
             <div class="form-row">

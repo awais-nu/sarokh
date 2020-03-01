@@ -35,6 +35,10 @@ export class AllOrdersComponent implements OnInit, AfterViewInit {
     this.router.navigate(['orders/vieworder', '216513']);
   }
 
+  addOrder(){
+    this.router.navigate(['orders/add']);
+  }
+
   fetchOrders () {
     this.adminService.fetchOrdersList().subscribe( res => {
     })

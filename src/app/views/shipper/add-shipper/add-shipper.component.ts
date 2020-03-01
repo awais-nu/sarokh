@@ -85,7 +85,7 @@ export class AddShipperComponent implements OnInit {
       country: ['', [Validators.required]],
       locationLatitude: ['', [Validators.required]],
       locationLongitude: ['', [Validators.required]],
-      postCode: ['', [Validators.required]],
+      postalCode: ['', [Validators.required]],
       contact: ['', [Validators.required]],
       email: ['', [Validators.required]],
       name: ['', [Validators.required]],
@@ -119,7 +119,7 @@ export class AddShipperComponent implements OnInit {
 
   submit(){
     this.shipperService.addShipper(this.fullFormsInfo).subscribe( res => {
-      debugger;
+      // debugger;
     }, err => {
 
     })
