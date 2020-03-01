@@ -9,6 +9,7 @@ import { CodReportsComponent } from './cod-reports/cod-reports.component';
 import { ViewOrderComponent } from './view-order/view-order.component';
 import { EditOrderComponent } from './edit-order/edit-order.component';
 import { AddOrderComponent } from './add-order/add-order.component';
+import { ShipperOnlyGuard } from '../../guards/shipper-only.guard';
 
 const routes: Routes = [
   {
@@ -17,7 +18,8 @@ const routes: Routes = [
   },
   {
 		path: 'add',
-		component: AddOrderComponent,
+    component: AddOrderComponent,
+    canActivate: [ShipperOnlyGuard]
   },
   {
     path: 'allorders',

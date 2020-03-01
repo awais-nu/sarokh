@@ -16,6 +16,6 @@ export class OrderService {
   }
 
   getOrderId(shipperId){
-    return this.http.get<any>(`${environment.apiURL}order/create-order-id/${shipperId}`);
+    return this.http.post<any>(`${environment.apiURL}order/create-order-id/${shipperId}`, {});
   }
 }

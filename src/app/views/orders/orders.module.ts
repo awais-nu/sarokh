@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule }   from '@angular/forms';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { OrdersRoutingModule } from './orders-routing.module';
@@ -32,6 +33,7 @@ import { AddOrderComponent } from './add-order/add-order.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     ReactiveFormsModule,
     OrdersRoutingModule,
     NgxDatatableModule,

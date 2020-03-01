@@ -14,6 +14,7 @@ export class AllOrdersComponent implements OnInit, AfterViewInit {
   @ViewChild('dataTable') table;
   dataTable: any;
   dtOption: any = {};
+  orders: any;
 
   constructor(private router: Router, private adminService: AdminService) { }
 
@@ -41,6 +42,7 @@ export class AllOrdersComponent implements OnInit, AfterViewInit {
 
   fetchOrders () {
     this.adminService.fetchOrdersList().subscribe( res => {
+      this.orders = res.data;
     })
   }
 

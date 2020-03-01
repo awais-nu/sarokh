@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit{
       let role = '';
       if(res && res.data){
         role = res.data.role.name;
-        localStorage.setItem('_id', res.data.userId);
+        localStorage.setItem('_id', res.data.id);
         if(role === 'Admin'){
           localStorage.setItem('role', 'admin');
         }else if(role === 'Shipper'){

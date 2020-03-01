@@ -7,15 +7,15 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class DealerService {
+export class WarehouseService {
 
   constructor(private http: HttpClient) { }
 
-  addDealer(formData:any){
-    return this.http.post<any>(`${environment.apiURL}dealer/add`, formData);
+  fetchSarokhWarehouses(){
+    return this.http.get<any>(`${environment.apiURL}sarokh-warehouse/get-list`);
   }
 
-  fetchDealers(){
-    return this.http.get<any>(`${environment.apiURL}dealer/get-list`);
+  fetchShipperWarehouses(shipperId){
+    return this.http.get<any>(`${environment.apiURL}shipper-warehouse/get-list/${shipperId}`);
   }
 }
