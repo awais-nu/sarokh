@@ -76,6 +76,11 @@ export const routes: Routes = [
         path: 'driver',
         canActivate: [AuthGuard],
         loadChildren: () => import('./views/driver/driver.module').then(m => m.DriverModule)
+      },
+      {
+        path: 'user',
+        canActivate: [AuthGuard],
+        loadChildren: () => import('./views/user/user.module').then(m => m.UserModule)
       }
     ]
   },
