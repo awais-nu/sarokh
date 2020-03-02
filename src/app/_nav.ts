@@ -210,12 +210,17 @@ export const navItems: INavData[] = [
     },
     {
         name: 'User',
-        url: '/dashboard',
+        url: '/user',
         icon: 'icon-ban',
         children: [
             {
+                name: 'Add User',
+                url: '/user/add',
+                icon: 'icon-map'
+            },
+            {
                 name: 'Users',
-                url: '/base/cards',
+                url: '/user',
                 icon: 'icon-map'
             },
             {
