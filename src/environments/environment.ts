@@ -7,4 +7,4 @@ export const environment = {
   production: false,
   apiURL: 'http://dash.sarokh.net:8081'
 
-};
+}; 
