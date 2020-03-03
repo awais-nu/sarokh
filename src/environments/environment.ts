@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  apiURL: 'http://vps789305.ovh.net:8081/'
+  apiURL: 'http://dash.sarokh.net:8081'
+
 };

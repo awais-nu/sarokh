@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { OrderService } from '../../../services/order.service';
 import { UserService } from '../../../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-user',
@@ -12,7 +12,10 @@ export class AddUserComponent implements OnInit {
 
   roles: any;
   userForm: FormGroup;
-  constructor(private formbuilder: FormBuilder, private userService: UserService) { }
+  submitted = false;;
+  constructor(private formbuilder: FormBuilder, private userService: UserService, 
+    private router: Router) { }
+  get f() { return this.userForm.controls; }
 
   ngOnInit(): void {
     this.initializeUserForm();
@@ -35,7 +38,22 @@ export class AddUserComponent implements OnInit {
 
   fetchUserRoles():void {
     this.userService.fetchUserRoles().subscribe(res => {
-      this.roles = res.data;
+      this.roles = res;
+    })
+  }
+
+  submit(): void{
+    this.submitted = true;
+    if(!this.userForm.invalid){
+      this.addUser();
+    }
+    
+  }
+
+  addUser(): void{
+    this.userService.addUser(this.userForm.value).subscribe(res => {
+      alert('Order created successfully')
+      this.router.navigate(['user']);
     })
   }
 
