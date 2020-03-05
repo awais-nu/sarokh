@@ -44,10 +44,11 @@ export class LoginComponent implements OnInit{
         localStorage.setItem('_id', res.data.id);
         if(role === 'Admin'){
           localStorage.setItem('role', 'admin');
+          this.router.navigate(['admin']);
         }else if(role === 'Shipper'){
           localStorage.setItem('role', 'shipper');
+          this.router.navigate(['shipper']);
         }
-        this.router.navigate(['dashboard']);
       }
     }, err => {
 

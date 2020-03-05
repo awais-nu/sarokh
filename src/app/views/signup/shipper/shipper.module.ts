@@ -5,11 +5,11 @@ import { ArchwizardModule } from 'angular-archwizard';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 import { ShipperRoutingModule } from './shipper-routing.module';
-import { ShippersComponent } from './shippers/shippers.component';
+import { AddShipperComponent } from './add-shipper/add-shipper.component';
 
 
 @NgModule({
-  declarations: [ShippersComponent],
+  declarations: [AddShipperComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
