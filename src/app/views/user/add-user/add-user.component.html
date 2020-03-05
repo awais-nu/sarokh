@@ -28,7 +28,12 @@
                             <owl-date-time [pickerType]="'calendar'" #dob></owl-date-time>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Gender" formControlName="gender" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }" required>
+                            <!-- <input type="text" class="form-control" placeholder="Gender" formControlName="gender" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }" required> -->
+                            <select class="form-control" name="gender" id="gender" formControlName="gender" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }" required>
+                              <option value="">--- Select Gender ---</option>
+                              <option value="male">Male</option>
+                              <option value="female">Female</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-row mb-3">
@@ -37,7 +42,7 @@
                             <input type="text" class="form-control" placeholder="User Name" formControlName="userName" [ngClass]="{ 'is-invalid': submitted && f.userName.errors }" required>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="User Password"
+                            <input type="password" class="form-control" placeholder="User Password"
                                 formControlName="userPassword" [ngClass]="{ 'is-invalid': submitted && f.userPassword.errors }" required>
                         </div>
                     </div>
@@ -53,7 +58,7 @@
                     <button type="submit" class="btn btn-success">Submit</button>
                 </form>
             </div>
-           
+
         </div>
     </div>
 </div>

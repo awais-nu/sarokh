@@ -12,6 +12,6 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string) {
-    return this.http.post<any>(`${environment.apiURL}/user/login`, { username, password });
+    return this.http.post<any>(`${environment.apiURL}user/login`, { username, password });
 }
 }
