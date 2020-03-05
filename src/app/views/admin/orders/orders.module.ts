@@ -16,7 +16,6 @@ import { BulkOrderUpdateComponent } from './bulk-order-update/bulk-order-update.
 import { CodReportsComponent } from './cod-reports/cod-reports.component';
 import { ViewOrderComponent } from './view-order/view-order.component';
 import { EditOrderComponent } from './edit-order/edit-order.component';
-import { AddOrderComponent } from './add-order/add-order.component';
 
 
 @NgModule({
@@ -28,8 +27,7 @@ import { AddOrderComponent } from './add-order/add-order.component';
     BulkOrderUpdateComponent,
     CodReportsComponent,
     ViewOrderComponent,
-    EditOrderComponent,
-    AddOrderComponent
+    EditOrderComponent
   ],
   imports: [
     CommonModule,
