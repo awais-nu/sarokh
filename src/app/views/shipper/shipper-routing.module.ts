@@ -1,28 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+import { AddShipperComponent } from './add-shipper/add-shipper.component';
 import { ShippersComponent } from './shippers/shippers.component';
 
 
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+		path: '',
+		component: ShippersComponent,
   },
   {
-    path: 'dashboard',
-    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
-  },
-  {
-    path: 'users',
-    loadChildren: () => import('./user/user.module').then(m => m.UserModule)
-  },
-  {
-    path: 'warehouses',
-    loadChildren: () => import('./warehouse/warehouse.module').then(m => m.WarehouseModule)
-  },
-  {
-    path: 'orders',
-    loadChildren: () => import('./order/order.module').then(m => m.OrderModule)
+		path: 'add',
+		component: AddShipperComponent,
   }
 
 ];
